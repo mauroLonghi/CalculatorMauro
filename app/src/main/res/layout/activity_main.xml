@@ -19,7 +19,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/input_editText"
-                android:TextSize="@dimens/txt_number_hint_size"
                 android:hint="@string/string_main_activity_hint_number"
         />
         <TextView
