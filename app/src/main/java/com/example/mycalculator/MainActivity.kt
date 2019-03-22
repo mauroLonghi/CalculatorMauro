@@ -13,7 +13,7 @@ import com.example.mycalculator.utils.Utils.TEXT_BUTTON_MINUS
 import com.example.mycalculator.utils.Utils.TEXT_BUTTON_NINE
 import com.example.mycalculator.utils.Utils.TEXT_BUTTON_ONE
 import com.example.mycalculator.utils.Utils.TEXT_BUTTON_PLUS
-import com.example.mycalculator.utils.Utils.TEXT_BUTTON_POR
+import com.example.mycalculator.utils.Utils.TEXT_BUTTON_MULT
 import com.example.mycalculator.utils.Utils.TEXT_BUTTON_SEVEN
 import com.example.mycalculator.utils.Utils.TEXT_BUTTON_SIX
 import com.example.mycalculator.utils.Utils.TEXT_BUTTON_THREE
@@ -63,16 +63,16 @@ class MainActivity : AppCompatActivity() {
             presenter?.valueNumber(TEXT_BUTTON_NINE)
         }
         button_divide.setOnClickListener {
-            presenter?.getOperador(TEXT_BUTTON_DIV)
+            presenter?.valueOperator(TEXT_BUTTON_DIV)
         }
         button_product.setOnClickListener {
-            presenter?.getOperador(TEXT_BUTTON_POR)
+            presenter?.valueOperator(TEXT_BUTTON_MULT)
         }
         button_sum.setOnClickListener {
-            presenter?.getOperador(TEXT_BUTTON_PLUS)
+            presenter?.valueOperator(TEXT_BUTTON_PLUS)
         }
         button_difference.setOnClickListener {
-            presenter?.getOperador(TEXT_BUTTON_MINUS)
+            presenter?.valueOperator(TEXT_BUTTON_MINUS)
         }
         button_del.setOnClickListener {
             presenter?.deleteLast()
@@ -81,7 +81,7 @@ class MainActivity : AppCompatActivity() {
             presenter?.clearSet()
         }
         button_result.setOnClickListener {
-            presenter?.getResult()
+            presenter?.valueResult()
         }
 
     }

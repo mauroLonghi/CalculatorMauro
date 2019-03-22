@@ -2,12 +2,12 @@
 
     <shape xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <solid android:color="#192730"/>
+    <solid android:color="@color/color_main_activity_button_oparation"/>
 
-    <stroke android:width="3dp" android:color="#B1BCBE" />
+    <stroke android:width="@dimen/stroke_buttons" android:color="@color/color_main_margin_buttons" />
 
-    <corners android:radius="10dp"/>
+    <corners android:radius="@dimen/radius_buttons"/>
 
-    <padding android:left="0dp" android:top="0dp" android:right="0dp" android:bottom="0dp" />
+    <padding android:left="@dimen/padding_buttons" android:top="@dimen/padding_buttons" android:right="@dimen/padding_buttons" android:bottom="@dimen/padding_buttons" />
 
 </shape>

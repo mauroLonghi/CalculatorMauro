@@ -23,7 +23,6 @@ class CalculatorView(activity: Activity) : ActivityView(activity) {
 
     fun clearLastItem(){
         val field=activity?.result_operation?.text.toString().substring(0, activity?.result_operation?.text.toString().length - 1)
-        Log.d("borra:   ", field)
         activity?.result_operation?.text = field
     }
 }

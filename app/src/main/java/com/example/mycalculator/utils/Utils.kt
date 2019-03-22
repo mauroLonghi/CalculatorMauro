@@ -15,9 +15,10 @@ object Utils {
     const val TEXT_BUTTON_NINE = "9"
 
     const val TEXT_BUTTON_DIV = "/"
-    const val TEXT_BUTTON_POR = "*"
+    const val TEXT_BUTTON_MULT = "*"
     const val TEXT_BUTTON_MINUS = "-"
     const val TEXT_BUTTON_PLUS = "+"
 
     const val TEXT_BUTTON_RESULT = "="
+    const val VALUE_ZERO="0.0"
 }
