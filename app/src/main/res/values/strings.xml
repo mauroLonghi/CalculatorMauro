@@ -19,4 +19,6 @@
     <string name="txt_main_activity_button_dot">.</string>
     <string name="txt_main_activity_button_CE">CE</string>
     <string name="txt_main_activity_button_AC">AC</string>
+    <string name="txt_main_activity_button_result">=</string>
+
 </resources>
