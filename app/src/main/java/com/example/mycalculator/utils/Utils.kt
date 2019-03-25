@@ -19,6 +19,5 @@ object Utils {
     const val TEXT_BUTTON_MINUS = "-"
     const val TEXT_BUTTON_PLUS = "+"
 
-    const val TEXT_BUTTON_RESULT = "="
-    const val VALUE_ZERO="0.0"
+    const val VALUE_ZERO:Double=0.0
 }

@@ -15,13 +15,13 @@ class CountPresenter(val model: CountModel, val view: CalculatorView) {
 
         when {
             model.operation == EMPTY_TEXT -> {
-                model.firstValue += value
+                model.operator_1 += value
                 view.clearFieldOperation()
-                view.setFieldOperation(model.firstValue)
+                view.setFieldOperation(model.operator_1)
             }
             else -> {
-                model.sedondValue += value
-                view.setFieldOperation(model.sedondValue)
+                model.operator_2 += value
+                view.setFieldOperation(model.operator_2)
             }
         }
     }
@@ -50,31 +50,35 @@ class CountPresenter(val model: CountModel, val view: CalculatorView) {
     }
 
     fun enterOperation(value: String) {
-        var auxResult: Double? = null
+        var auxResult: Double? = VALUE_ZERO
 
-        if (model.firstValue == EMPTY_TEXT && model.result != EMPTY_TEXT) {
-            model.firstValue = model.result
-        }
-
-        if (model.firstValue != EMPTY_TEXT && model.sedondValue != EMPTY_TEXT) {
-
-            when (value) {
-                TEXT_BUTTON_PLUS -> {
-                    auxResult = model.firstValue.toDouble() + model.sedondValue.toDouble()
-                }
-                TEXT_BUTTON_MINUS -> {
-                    auxResult = model.firstValue.toDouble() - model.sedondValue.toDouble()
-                }
-                TEXT_BUTTON_MULT -> {
-                    auxResult = model.firstValue.toDouble() * model.sedondValue.toDouble()
-                }
-                TEXT_BUTTON_DIV -> {
-                    auxResult = model.firstValue.toDouble() / model.sedondValue.toDouble()
-                }
-
-                else -> VALUE_ZERO
+        if (value!= EMPTY_TEXT) {
+            if (model.operator_1 == EMPTY_TEXT && model.result != EMPTY_TEXT) {
+                model.operator_1 = model.result
             }
 
+            if (model.operator_1 != EMPTY_TEXT && model.operator_2 != EMPTY_TEXT) {
+
+                when (value) {
+                    TEXT_BUTTON_PLUS -> {
+                        auxResult = model.operator_1.toDouble() + model.operator_2.toDouble()
+                    }
+                    TEXT_BUTTON_MINUS -> {
+                        auxResult = model.operator_1.toDouble() - model.operator_2.toDouble()
+                    }
+                    TEXT_BUTTON_MULT -> {
+                        auxResult = model.operator_1.toDouble() * model.operator_2.toDouble()
+                    }
+                    TEXT_BUTTON_DIV -> {
+                        auxResult = model.operator_1.toDouble() / model.operator_2.toDouble()
+                    }
+
+                    else -> auxResult=VALUE_ZERO
+                }
+
+            }
+        }else {
+            auxResult=model.operator_1.toDouble()
         }
         model.result = auxResult.toString()
 

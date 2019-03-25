@@ -3,14 +3,14 @@ package com.example.mycalculator.mvp.model
 import com.example.mycalculator.utils.Utils.EMPTY_TEXT
 
 class CountModel() {
-    var firstValue = EMPTY_TEXT
-    var sedondValue = EMPTY_TEXT
+    var operator_1 = EMPTY_TEXT
+    var operator_2 = EMPTY_TEXT
     var result = EMPTY_TEXT
     var operation = EMPTY_TEXT
 
     fun cleanValues() {
-        firstValue = EMPTY_TEXT
-        sedondValue = EMPTY_TEXT
+        operator_1 = EMPTY_TEXT
+        operator_2 = EMPTY_TEXT
         operation = EMPTY_TEXT
     }
 
