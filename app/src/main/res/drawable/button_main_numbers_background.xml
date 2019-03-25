@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <solid android:color="@color/color_main_activity_button_numbers"/>
+
+    <stroke android:width="@dimen/stroke_buttons" android:color="@color/color_main_margin_buttons" />
+
+    <corners android:radius="@dimen/radius_buttons"/>
+
+    <padding android:left="@dimen/padding_buttons" android:top="@dimen/padding_buttons" android:right="@dimen/padding_buttons" android:bottom="@dimen/padding_buttons" />
+
+</shape>

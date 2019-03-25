@@ -4,6 +4,7 @@
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
     <color name="color_operations">#FFFFFF</color>
+    <color name="color_main_margin_buttons">#B1BCBE</color>
     <color name="color_main_activity_button_oparation">#192730</color>
     <color name="color_main_activity_button_numbers">#1CA8F3</color>
 
